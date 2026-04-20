@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f3;
+    color: #333;
+    line-height: 1.6;
+    padding: 15px;
+}
+
+/*pseudo clases for the links in first nav*/
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 1px;
+}
+
+.header a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.2s ease;
+    padding: 5px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Link not veryfied */
+.header a:link {
+    color: #0066cc;
+}
+
+
+.header a:hover {
+    color: #cc0f0f;
+    background-color: #e6f0ff;
+    }
+
+/*in the moment of active click*/
+.header a:active {
+    color: #000;
+    background-color: #ffe6e6;
+}
+
+/* only for logo because strong*/
+a strong {
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.search-box input[type="text"]:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0,102,204,0.3);
+}
+
+        .first-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+
+/*second nav*/
+.second-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    gap: 10px;
+    background-color: #cc0f0f;  /*  */
+    border-radius: 10px;         /* the border roundness|| squareness of the whole red */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* links = buttons like*/
+.second-nav-links a {
+    padding: 4px 20px;
+    background-color: transparent;  /* no own background, parent's */
+    color: white;                   /* txt color because links */
+    font-weight: 600;
+    border-radius: 3px;             /* the border roundness|| squareness*/
+    transition: all 0.5s ease;
+    text-decoration: none;           /*del underline*/
+}
+
+.second-nav-links a:hover {
+    background-color: white;         /* backgropund color changes */
+    color: #000;                  /* txt changes for color */
+}
+
+/* container puts all in a row */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;       /* allows wrapping on small screens */
+    gap: 20px;             /* space between cards */
+    justify-content: center; /* optional: center the row */
+}
+
+/* Each product card */
+.product-card {
+    flex: 1;               /* grow equally, but with a minimum width */
+    min-width: 200px;      /* prevents cards from becoming too narrow */
+    max-width: 300px;      /* optional: limits card width */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Images shrink automatically */
+.product-card img {
+    width: 100%;           /* takes full width of the card */
+    height: auto;          /* keeps aspect ratio */
+    display: block;        /* removes extra space below image */
+}
+
+.full-window-img {
+    width: calc(100% + 30px); /* Stretches to ignore the 15px left/right body padding */
+    margin-left: -15px;        /* Pulls image to the absolute left edge */
+    height: auto;             /* Keeps the image proportions perfect */
+    display: block;
+}
+
+/* --- LOGIN PAGE SPECIFIC STYLES --- */
+
+/* Centers the login card on the page */
+.login-card {
+    background: white;
+    max-width: 450px;
+    margin: 60px auto; 
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-card h1 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+.login-card a {
+    text-decoration: none;
+    color: #2c3e50; /* Matches your h1 color */
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* Benefit List (The bullet points) */
+.benefit-list {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.benefit-list li {
+    margin: 8px 0;
+}
+
+.benefit-list li::before {
+    content: "✓";
+    color: #0066cc; /* Tech Blue */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Email Input Field - Styled to match your Search Box */
+input[type="email"] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+}
+
+/* The Continue Button */
+.btn-continue {
+    width: 100%;
+    padding: 14px;
+    background-color: #0066cc; /* Tech Blue */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-continue:hover {
+    background-color: #cc0f0f; /* Switches to Tech Red on hover */
+}
+
+/* Signup text at the bottom */
+.signup-text {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+.signup-text strong {
+    color: #333;
+}
+
+
+/* Face ca label-urile să stea deasupra input-urilor */
+.form-section label {
+    display: block;      /* Ocupă tot rândul */
+    text-align: left;    /* Aliniere la stânga */
+    margin-bottom: 5px;  /* Spațiu mic între text și căsuță */
+    font-weight: 600;    /* Text puțin mai îngroșat pentru vizibilitate */
+    color: #333;
+}
+
+/* Asigură-te că input-urile ocupă tot rândul disponibil */
+.form-section input {
+    display: block;
+    width: 100%;         /* Se întinde pe toată lățimea cardului */
+    margin-bottom: 20px; /* Spațiu între câmpuri */
+}
+
+.user-email-display {
+    color: #cc0f0f ;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;     /* Se mulează pe lungimea textului */
+}
+
+/* --- CART PAGE STYLES --- */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cart-container h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Individual Cart Item Flexbox */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    gap: 15px; /* Space between the left block and right block */
+}
+
+/* Left side containing checkbox and image */
+.cart-item-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #0066cc; /* Makes the checked box blue */
+}
+
+.cart-item-img {
+    width: 80px;      /* Smaller image like Temu */
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Right side containing all text and buttons */
+.cart-item-right {
+    flex: 1; /* Takes up all remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80px; /* Matches image height */
+}
+
+/* Header row with Title and Delete Button */
+.cart-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.cart-item-title {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.3;
+    /* Optional: Limits text to 2 lines with an ellipsis */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Emoji Delete Button */
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 1.3rem; /* Make the emoji a good size */
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.btn-delete:hover {
+    transform: scale(1.1); /* Slight pop effect on hover */
+}
+
+/* Footer row with Price and Quantity */
+.cart-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.cart-item-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #cc0f0f; /* Highlighting price in red like you did in the nav */
+}
+
+/* Quantity Dropdown */
+.cart-qty-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.qty-select {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded pill look */
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.qty-select:focus {
+    border-color: #0066cc;
+}
+
+/* --- HOMEPAGE ADD TO CART BUTTON --- */
+.btn-add-cart {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #e6f0ff; /* Light blue background */
+    color: #0066cc;            /* Darker blue text for readability */
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth fade effect */
+}
+
+/* Hover state */
+.btn-add-cart:hover {
+    background-color: #cc0f0f; /* Tech Red background */
+    color: white;              /* White text on hover */
+}
