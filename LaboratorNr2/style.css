@@ -92,7 +92,7 @@ a strong {
     margin-bottom: 30px;
     padding: 5px 20px;
     gap: 10px;
-    background-color: #cc0f0f;  /*  */
+    background-color: #cc0f0f;  
     border-radius: 10px;         /* the border roundness|| squareness of the whole red */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -113,42 +113,40 @@ a strong {
     color: #000;                  /* txt changes for color */
 }
 
-/* container puts all in a row */
+/* container puts all in a row, flex */
 .product-row {
     display: flex;
-    flex-wrap: wrap;       /* allows wrapping on small screens */
-    gap: 20px;             /* space between cards */
-    justify-content: center; /* optional: center the row */
+    flex-wrap: wrap;       
+    gap: 20px;             
+    justify-content: center;
 }
 
-/* Each product card */
+/*product cards */
 .product-card {
-    flex: 1;               /* grow equally, but with a minimum width */
-    min-width: 200px;      /* prevents cards from becoming too narrow */
-    max-width: 300px;      /* optional: limits card width */
+    flex: 1;              
+    min-width: 200px;    
+    max-width: 300px;     
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
 }
 
-/* Images shrink automatically */
+/*img shrink automatically */
 .product-card img {
-    width: 100%;           /* takes full width of the card */
-    height: auto;          /* keeps aspect ratio */
-    display: block;        /* removes extra space below image */
-}
-
-.full-window-img {
-    width: calc(100% + 30px); /* Stretches to ignore the 15px left/right body padding */
-    margin-left: -15px;        /* Pulls image to the absolute left edge */
-    height: auto;             /* Keeps the image proportions perfect */
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-/* --- LOGIN PAGE SPECIFIC STYLES --- */
+.full-window-img {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    height: auto;
+    display: block;
+}
 
-/* Centers the login card on the page */
+/* center log page int */
 .login-card {
     background: white;
     max-width: 450px;
@@ -166,11 +164,11 @@ a strong {
 }
 .login-card a {
     text-decoration: none;
-    color: #2c3e50; /* Matches your h1 color */
+    color: #2c3e50; 
     display: inline-block;
     margin-bottom: 10px;
 }
-/* Benefit List (The bullet points) */
+/* benefit list*/
 .benefit-list {
     list-style: none;
     text-align: left;
@@ -185,12 +183,12 @@ a strong {
 
 .benefit-list li::before {
     content: "✓";
-    color: #0066cc; /* Tech Blue */
+    color: #0066cc;
     font-weight: bold;
     margin-right: 10px;
 }
 
-/* Email Input Field - Styled to match your Search Box */
+/* input email*/
 input[type="email"] {
     width: 100%;
     padding: 14px 20px;
@@ -207,11 +205,11 @@ input[type="email"]:focus {
     box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
 }
 
-/* The Continue Button */
+/* continue button*/
 .btn-continue {
     width: 100%;
     padding: 14px;
-    background-color: #0066cc; /* Tech Blue */
+    background-color: #0066cc;
     color: white;
     border: none;
     border-radius: 30px;
@@ -222,10 +220,10 @@ input[type="email"]:focus {
 }
 
 .btn-continue:hover {
-    background-color: #cc0f0f; /* Switches to Tech Red on hover */
+    background-color: #cc0f0f;
 }
 
-/* Signup text at the bottom */
+/* sign txt style*/
 .signup-text {
     margin-top: 25px;
     font-size: 0.9rem;
@@ -238,20 +236,19 @@ input[type="email"]:focus {
 }
 
 
-/* Face ca label-urile să stea deasupra input-urilor */
 .form-section label {
-    display: block;      /* Ocupă tot rândul */
-    text-align: left;    /* Aliniere la stânga */
-    margin-bottom: 5px;  /* Spațiu mic între text și căsuță */
-    font-weight: 600;    /* Text puțin mai îngroșat pentru vizibilitate */
+    display: block;      /* 1 row  lab*/
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
     color: #333;
 }
 
-/* Asigură-te că input-urile ocupă tot rândul disponibil */
+/* input 1 row*/
 .form-section input {
     display: block;
-    width: 100%;         /* Se întinde pe toată lățimea cardului */
-    margin-bottom: 20px; /* Spațiu între câmpuri */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .user-email-display {
@@ -260,10 +257,10 @@ input[type="email"]:focus {
     margin: 15px 0;
     padding: 10px;
     border-radius: 8px;
-    display: inline-block;     /* Se mulează pe lungimea textului */
+    display: inline-block;
 }
 
-/* --- CART PAGE STYLES --- */
+/* cart page style*/
 .cart-container {
     max-width: 800px;
     margin: 0 auto;
@@ -280,16 +277,16 @@ input[type="email"]:focus {
     color: #2c3e50;
 }
 
-/* Individual Cart Item Flexbox */
+/* item cart box*/
 .cart-item {
     display: flex;
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
-    gap: 15px; /* Space between the left block and right block */
+    gap: 15px;
 }
 
-/* Left side containing checkbox and image */
+/* left img check box */
 .cart-item-left {
     display: flex;
     align-items: center;
@@ -300,25 +297,25 @@ input[type="email"]:focus {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: #0066cc; /* Makes the checked box blue */
+    accent-color: #0066cc; /* col on selection*/
 }
 
 .cart-item-img {
-    width: 80px;      /* Smaller image like Temu */
+    width: 80px;      /* img detail */
     height: 80px;
     object-fit: cover;
 }
 
-/* Right side containing all text and buttons */
+/* right side detail*/
 .cart-item-right {
-    flex: 1; /* Takes up all remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 80px; /* Matches image height */
+    min-height: 80px; 
 }
 
-/* Header row with Title and Delete Button */
+/*name item, del emoj*/
 .cart-item-header {
     display: flex;
     justify-content: space-between;
@@ -330,27 +327,26 @@ input[type="email"]:focus {
     font-size: 0.95rem;
     color: #333;
     line-height: 1.3;
-    /* Optional: Limits text to 2 lines with an ellipsis */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Emoji Delete Button */
+/* del emoj */
 .btn-delete {
     background: none;
     border: none;
-    font-size: 1.3rem; /* Make the emoji a good size */
+    font-size: 1.3rem; /*size*/
     cursor: pointer;
     padding: 5px;
     transition: transform 0.2s ease;
 }
 
 .btn-delete:hover {
-    transform: scale(1.1); /* Slight pop effect on hover */
+    transform: scale(1.1); /*popping*/
 }
 
-/* Footer row with Price and Quantity */
+/* footer quantity & price*/
 .cart-item-footer {
     display: flex;
     justify-content: space-between;
@@ -361,10 +357,10 @@ input[type="email"]:focus {
 .cart-item-price {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #cc0f0f; /* Highlighting price in red like you did in the nav */
+    color: #cc0f0f;
 }
 
-/* Quantity Dropdown */
+/*quantity*/
 .cart-qty-wrapper {
     display: flex;
     align-items: center;
@@ -376,7 +372,7 @@ input[type="email"]:focus {
 .qty-select {
     padding: 4px 8px;
     border: 1px solid #ccc;
-    border-radius: 20px; /* Rounded pill look */
+    border-radius: 20px; 
     font-size: 0.9rem;
     cursor: pointer;
     background-color: white;
@@ -388,22 +384,22 @@ input[type="email"]:focus {
     border-color: #0066cc;
 }
 
-/* --- HOMEPAGE ADD TO CART BUTTON --- */
+/*hp add button style*/
 .btn-add-cart {
     width: 100%;
     padding: 8px;
     margin-top: 10px;
-    background-color: #e6f0ff; /* Light blue background */
-    color: #0066cc;            /* Darker blue text for readability */
+    background-color: #e6f0ff;
+    color: #0066cc;
     border: none;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth fade effect */
+    transition: all 0.3s ease;
 }
 
 /* Hover state */
 .btn-add-cart:hover {
-    background-color: #cc0f0f; /* Tech Red background */
-    color: white;              /* White text on hover */
+    background-color: #cc0f0f;
+    color: white;
 }
